@@ -119,7 +119,7 @@ extension LoginViewController {
     
     fileprivate func _addInsets(_ isAdd:Bool = true, keyboardFrame:CGRect=CGRect.zero) {
         guard let window = view.window else {
-            fatalError("Impossible to perform w/o window")
+            error_impossibleCondition("window is required")
         }
         if isAdd {
             let loginButtonConvertedFrame = window.convert(
