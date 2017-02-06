@@ -6,10 +6,16 @@
 //  Copyright © 2017 Mykola Denysyuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class LoginCoordinator: Coordinator<LoginViewController> {
+    
+    override var initialControllerIdentifier: String? {
+        get {return super.initialControllerIdentifier ?? "login"}
+        set {super.initialControllerIdentifier = newValue}
+    }
+    
     override func run() {
         initialController.delegate = self
         super.run()
@@ -18,10 +24,12 @@ class LoginCoordinator: Coordinator<LoginViewController> {
 
 extension LoginCoordinator: ILoginControllerDelegate {
     internal func loginDataProvider() -> DataProvider<LoginStorage> {
-        error_abstractMethod()
+        return LoginDataProvider()
     }
 
     func loginCompleted(credentials:LoginCredentials) {
-        //
+        
     }
 }
+
+

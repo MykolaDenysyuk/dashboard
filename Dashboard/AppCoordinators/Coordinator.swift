@@ -8,50 +8,62 @@
 
 import UIKit
 
+//
+// Coordinators are used to incapsulate navigation flow withing the app,
+// to handle/transfer events among other screens, etc
+
 /** Base coordinator interface */
-protocol ICoordinator: class {
-    associatedtype InitialControllerType:UIViewController
-    
-    var initialControllerIdentifier:String {get}
-    var rootController:UIViewController {get}
-    var initialController:InitialControllerType {get set}
-    
-    init(rootController:UIViewController)
+protocol ICoordinator {
+    /** coordinator should be initialized with root controller */
+    init(_ rootController:UIViewController)
+    /** call to show first controller of the flow for this coordinator */
     func run()
-    
-    func instantiateInitialController() -> InitialControllerType
 }
 
-extension ICoordinator {
-    var rootNavigationController:UINavigationController {
-        return AppDelegate.shared.rootNavigationController
-    }
-    func instantiateInitialController() -> InitialControllerType {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let controller = storyboard
-            .instantiateViewController(
-                withIdentifier: initialControllerIdentifier) as? InitialControllerType {
-            return controller
-        }
-        error_wrongType(expected: InitialControllerType.self)
-    }
+/** Base coordinator with initial controller of generic type */
+protocol ICoordinatorWithType: ICoordinator {
+    associatedtype InitialControllerType:UIViewController
+    
+    /** the controller should be shown first if call run() */
+    var initialController:InitialControllerType {get set}
+    /** the root controller from where navigation flow should begin */
+    var rootController:UIViewController {get}
 }
 
 /** General coordinator class */
-class Coordinator<T:UIViewController>: ICoordinator {
-    var initialControllerIdentifier:String {
-        error_abstractMethod()
-    }
+class Coordinator<T:UIViewController>: ICoordinatorWithType {
+    var initialControllerIdentifier:String?
     let rootController:UIViewController
     lazy var initialController:T = {
         return self.instantiateInitialController()
     }()
     
-    required init(rootController:UIViewController) {
+    required init(_ rootController:UIViewController) {
         self.rootController = rootController
     }
     
     func run() {
         rootController.show(initialController, sender: self)
+    }
+    
+    
+    /** Helper method. By defualt loads controller from main storyboard by
+        initialControllerIdentifier */
+    func instantiateInitialController() -> T {
+        return Coordinator.instantiateInitialController(initialControllerIdentifier)
+    }
+    
+    static func instantiateInitialController(_ initialControllerIdentifier:String?) -> T {
+        guard
+            let storyboardID = initialControllerIdentifier
+            else {error_impossibleCondition("initialControllerIdentifier is required")}
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let controller = storyboard
+            .instantiateViewController(
+                withIdentifier: storyboardID) as? T {
+            return controller
+        }
+        error_wrongType(expected: T.self)
     }
 }

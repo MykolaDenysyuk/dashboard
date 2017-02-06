@@ -14,13 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Vars
     
     static let shared:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    var window: UIWindow?
-    var rootNavigationController:UINavigationController!
+    let coordinator = AppCoordinator()
 
     // MARK: UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        coordinator.run()
+        
         return true
     }
 

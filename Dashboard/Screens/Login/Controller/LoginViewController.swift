@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    private(set) var storage = LoginStorage() {
+    private(set) var storage:LoginStorage! {
         didSet {_configureViews()}
     }
     var delegate:ILoginControllerDelegate!
@@ -34,8 +34,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        edgesForExtendedLayout = []
+        navigationController?.isNavigationBarHidden = true
+        
         _registerForKeyboardNotifications()
-        /*
+        
         let dataProvider = delegate!.loginDataProvider()
         dataProvider.loadData { (success, storage, error) in
             guard
@@ -46,7 +49,7 @@ class LoginViewController: UIViewController {
             }
             
             self.storage = storage
-        }*/
+        }
     }
 
     
@@ -90,7 +93,7 @@ extension LoginViewController {
         center.addObserver(
             self,
             selector: #selector(keyboardWillDisappear(_:)),
-            name: .UIKeyboardWillShow,
+            name: .UIKeyboardWillHide,
             object: nil)
     }
     
@@ -102,6 +105,12 @@ extension LoginViewController {
         }
         
         _addInsets(keyboardFrame: keyboardFrameValue.cgRectValue)
+        
+        if let currentField:UITextField = view.currentFirstResponder() {
+            let currentFieldFrame = scrollView
+                .convert(currentField.frame, from: currentField.superview)
+            scrollView.scrollRectToVisible(currentFieldFrame, animated: true)
+        }
     }
     
     func keyboardWillDisappear(_ notification:Notification) {
@@ -135,10 +144,14 @@ extension LoginViewController {
 extension LoginViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == loginField {
-            passwordField.becomeFirstResponder()
-        } else {
-            _doLogin()
+        let text = textField.text ?? ""
+        if !text.isEmpty {
+            if textField == loginField {
+                passwordField.becomeFirstResponder()
+            } else {
+                textField.endEditing(true)
+                _doLogin()
+            }
         }
         return true
     }
