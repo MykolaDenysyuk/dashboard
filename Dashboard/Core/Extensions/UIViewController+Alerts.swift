@@ -11,8 +11,12 @@ import UIKit
 extension UIViewController {
     func showAlert(withTitle:String?=nil,
                    message:String?=nil,
-                   defaultAtion:()->()={}) {
-        // TODO: show alert controller
+                   defaultAtion:@escaping ()->()={}) {
+        let alert = UIAlertController(title: withTitle, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "action.ok".localized, style: .default, handler: { (_) in
+            defaultAtion()
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     /** shows loading indicator view above current controller's view */

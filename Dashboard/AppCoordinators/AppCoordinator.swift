@@ -16,12 +16,14 @@ class AppCoordinator {
     var rootNavigationController:UINavigationController
     // dependencies
     lazy var loginCoordinator:ICoordinator = {
-        return LoginCoordinator(self.rootNavigationController)
+        let coordinator = LoginCoordinator(self.rootNavigationController)
+        coordinator.delegate = self
+        return coordinator
     }()
     lazy var worldsCoordinator:ICoordinator = {
         return WorldsCoordinator(self.rootNavigationController)
     }()
-    private(set) var session: Session?
+    fileprivate(set) var session: Session?
     
     // MARK: Initializer
     init() {
@@ -35,7 +37,15 @@ class AppCoordinator {
     /** Call to start app's navigation flow and present initial screen of the app */
     func run() {
         rootWindow.makeKeyAndVisible()
-        worldsCoordinator.run()
+        loginCoordinator.run()
     }
     
+}
+
+
+extension AppCoordinator: ILoginCoordinatorDelegate {
+    func loginCompleted(credentials: LoginCredentials) {
+        session = Session(user: credentials)        
+        worldsCoordinator.run()
+    }
 }

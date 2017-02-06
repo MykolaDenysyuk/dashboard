@@ -34,8 +34,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        title = "login.title".localized
+        
         automaticallyAdjustsScrollViewInsets = false
-        navigationController?.isNavigationBarHidden = true
         
         _registerForKeyboardNotifications()
         
@@ -52,6 +53,10 @@ class LoginViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     
     // MARK: Actions
 
@@ -69,8 +74,13 @@ class LoginViewController: UIViewController {
     fileprivate func _doLogin() {
         guard
             let login = loginField.text,
-            let password = passwordField.text
-            else {return /* TODO: show alert*/}
+            let password = passwordField.text,
+            !login.isEmpty,
+            !password.isEmpty
+            else {
+                showAlert(message:"login.alert".localized)
+                return
+        }
         let result = LoginCredentials(login: login, password: password)
         delegate.loginCompleted(credentials: result)
     }

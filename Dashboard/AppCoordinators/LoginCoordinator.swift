@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol ILoginCoordinatorDelegate {
+    func loginCompleted(credentials:LoginCredentials)
+}
 
 class LoginCoordinator: Coordinator<LoginViewController> {
+    
+    // MARK: Vars
+    
+    var delegate:ILoginCoordinatorDelegate!
+    
+    // MARK: Actions
     
     override var initialControllerIdentifier: String? {
         get {return super.initialControllerIdentifier ?? "login"}
@@ -22,13 +31,17 @@ class LoginCoordinator: Coordinator<LoginViewController> {
     }
 }
 
+
 extension LoginCoordinator: ILoginControllerDelegate {
     internal func loginDataProvider() -> DataProvider<LoginStorage> {
-        return LoginDataProvider()
+        let dataProvider = DataProvider<LoginStorage> { (complete) in
+            complete(true, LoginStorage(), nil)
+        }
+        return dataProvider
     }
 
     func loginCompleted(credentials:LoginCredentials) {
-        
+        delegate.loginCompleted(credentials: credentials)
     }
 }
 

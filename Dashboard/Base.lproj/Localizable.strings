@@ -6,6 +6,15 @@
   Copyright © 2017 Mykola Denysyuk. All rights reserved.
 */
 
+// General
+"action.ok" = "OK";
+
+
+// Login
+
+"login.title" = "Log out";
+"login.alert" = "Username and password are required";
+
 
 // Worlds
 
