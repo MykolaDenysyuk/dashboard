@@ -18,7 +18,10 @@ class AppCoordinator {
     lazy var loginCoordinator:ICoordinator = {
         return LoginCoordinator(self.rootNavigationController)
     }()
-    
+    lazy var worldsCoordinator:ICoordinator = {
+        return WorldsCoordinator(self.rootNavigationController)
+    }()
+    private(set) var session: Session?
     
     // MARK: Initializer
     init() {
@@ -32,7 +35,7 @@ class AppCoordinator {
     /** Call to start app's navigation flow and present initial screen of the app */
     func run() {
         rootWindow.makeKeyAndVisible()
-        loginCoordinator.run()
+        worldsCoordinator.run()
     }
     
 }

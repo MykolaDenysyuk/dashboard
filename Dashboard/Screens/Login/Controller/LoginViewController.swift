@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        edgesForExtendedLayout = []
+        automaticallyAdjustsScrollViewInsets = false
         navigationController?.isNavigationBarHidden = true
         
         _registerForKeyboardNotifications()

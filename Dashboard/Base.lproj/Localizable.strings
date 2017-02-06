@@ -5,3 +5,9 @@
   Created by Mykola Denysyuk on 2/3/17.
   Copyright © 2017 Mykola Denysyuk. All rights reserved.
 */
+
+
+// Worlds
+
+"worlds.title" = "Available Worlds";
+"worlds.networkd.dataFailed" = "Can't retrieve data:";

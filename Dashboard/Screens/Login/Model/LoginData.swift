@@ -15,8 +15,3 @@ class LoginStorage {
     var lastPassword:String?
     var isRememberMe = false
 }
-
-struct LoginCredentials {
-    let login:String
-    let password:String
-}

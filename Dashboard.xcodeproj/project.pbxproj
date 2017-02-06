@@ -22,6 +22,20 @@
 		6FB3E5431E47362200DB7DF1 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5421E47362200DB7DF1 /* UIViewController+Alerts.swift */; };
 		6FB3E5451E4784E600DB7DF1 /* LoginDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5441E4784E600DB7DF1 /* LoginDataProvider.swift */; };
 		6FB3E5471E4785DA00DB7DF1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5461E4785DA00DB7DF1 /* AppCoordinator.swift */; };
+		6FB3E54B1E4901B700DB7DF1 /* response.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E54A1E4901B700DB7DF1 /* response.txt */; };
+		6FB3E54D1E4906CC00DB7DF1 /* WorldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E54C1E4906CC00DB7DF1 /* WorldsViewController.swift */; };
+		6FB3E5501E490B7200DB7DF1 /* WorldViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E54E1E490B7200DB7DF1 /* WorldViewCell.swift */; };
+		6FB3E5511E490B7200DB7DF1 /* WorldViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E54F1E490B7200DB7DF1 /* WorldViewCell.xib */; };
+		6FB3E5531E490B8300DB7DF1 /* WorldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5521E490B8300DB7DF1 /* WorldItem.swift */; };
+		6FB3E5561E490C6B00DB7DF1 /* WorldsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5551E490C6B00DB7DF1 /* WorldsResponse.swift */; };
+		6FB3E5581E490EAA00DB7DF1 /* Dictionary+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5571E490EAA00DB7DF1 /* Dictionary+Values.swift */; };
+		6FB3E55A1E49162700DB7DF1 /* WorldsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5591E49162700DB7DF1 /* WorldsCoordinator.swift */; };
+		6FB3E55C1E4918BD00DB7DF1 /* WorldsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E55B1E4918BD00DB7DF1 /* WorldsDatasource.swift */; };
+		6FB3E55E1E491BAE00DB7DF1 /* NSLocale+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E55D1E491BAE00DB7DF1 /* NSLocale+Extra.swift */; };
+		6FB3E5601E49208C00DB7DF1 /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E55F1E49208C00DB7DF1 /* String+Extra.swift */; };
+		6FB3E5621E49272400DB7DF1 /* WorldsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5611E49272400DB7DF1 /* WorldsDataProvider.swift */; };
+		6FB3E5641E49310900DB7DF1 /* DataProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5631E49310900DB7DF1 /* DataProviders.swift */; };
+		6FB3E5661E49340100DB7DF1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5651E49340100DB7DF1 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +56,20 @@
 		6FB3E5421E47362200DB7DF1 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		6FB3E5441E4784E600DB7DF1 /* LoginDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataProvider.swift; sourceTree = "<group>"; };
 		6FB3E5461E4785DA00DB7DF1 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6FB3E54A1E4901B700DB7DF1 /* response.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = response.txt; sourceTree = "<group>"; };
+		6FB3E54C1E4906CC00DB7DF1 /* WorldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsViewController.swift; sourceTree = "<group>"; };
+		6FB3E54E1E490B7200DB7DF1 /* WorldViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewCell.swift; sourceTree = "<group>"; };
+		6FB3E54F1E490B7200DB7DF1 /* WorldViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldViewCell.xib; sourceTree = "<group>"; };
+		6FB3E5521E490B8300DB7DF1 /* WorldItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldItem.swift; sourceTree = "<group>"; };
+		6FB3E5551E490C6B00DB7DF1 /* WorldsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsResponse.swift; sourceTree = "<group>"; };
+		6FB3E5571E490EAA00DB7DF1 /* Dictionary+Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Values.swift"; sourceTree = "<group>"; };
+		6FB3E5591E49162700DB7DF1 /* WorldsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsCoordinator.swift; sourceTree = "<group>"; };
+		6FB3E55B1E4918BD00DB7DF1 /* WorldsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsDatasource.swift; sourceTree = "<group>"; };
+		6FB3E55D1E491BAE00DB7DF1 /* NSLocale+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+Extra.swift"; sourceTree = "<group>"; };
+		6FB3E55F1E49208C00DB7DF1 /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		6FB3E5611E49272400DB7DF1 /* WorldsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsDataProvider.swift; sourceTree = "<group>"; };
+		6FB3E5631E49310900DB7DF1 /* DataProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviders.swift; sourceTree = "<group>"; };
+		6FB3E5651E49340100DB7DF1 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +94,7 @@
 				6F7200051E44DDB800F2E4B6 /* Main.storyboard */,
 				6F72000A1E44DDB800F2E4B6 /* LaunchScreen.storyboard */,
 				6FB3E5291E44EDAC00DB7DF1 /* Localizable.strings */,
+				6FB3E54A1E4901B700DB7DF1 /* response.txt */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -159,6 +188,10 @@
 		6FB3E51D1E44E09200DB7DF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6FB3E5551E490C6B00DB7DF1 /* WorldsResponse.swift */,
+				6FB3E5521E490B8300DB7DF1 /* WorldItem.swift */,
+				6FB3E55B1E4918BD00DB7DF1 /* WorldsDatasource.swift */,
+				6FB3E5611E49272400DB7DF1 /* WorldsDataProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +199,8 @@
 		6FB3E51E1E44E09200DB7DF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6FB3E54E1E490B7200DB7DF1 /* WorldViewCell.swift */,
+				6FB3E54F1E490B7200DB7DF1 /* WorldViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +208,7 @@
 		6FB3E51F1E44E09200DB7DF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6FB3E54C1E4906CC00DB7DF1 /* WorldsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				6FB3E5321E44FDAB00DB7DF1 /* NetworkingInterfaces.swift */,
+				6FB3E5631E49310900DB7DF1 /* DataProviders.swift */,
+				6FB3E5651E49340100DB7DF1 /* Session.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -200,6 +238,9 @@
 			children = (
 				6FB3E5351E44FDB700DB7DF1 /* UIResponder+FirstResponder.swift */,
 				6FB3E5421E47362200DB7DF1 /* UIViewController+Alerts.swift */,
+				6FB3E5571E490EAA00DB7DF1 /* Dictionary+Values.swift */,
+				6FB3E55D1E491BAE00DB7DF1 /* NSLocale+Extra.swift */,
+				6FB3E55F1E49208C00DB7DF1 /* String+Extra.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +259,7 @@
 				6FB3E5401E450D3F00DB7DF1 /* Coordinator.swift */,
 				6FB3E5461E4785DA00DB7DF1 /* AppCoordinator.swift */,
 				6FB3E53E1E450BEE00DB7DF1 /* LoginCoordinator.swift */,
+				6FB3E5591E49162700DB7DF1 /* WorldsCoordinator.swift */,
 			);
 			path = AppCoordinators;
 			sourceTree = "<group>";
@@ -285,6 +327,8 @@
 				6F72000C1E44DDB800F2E4B6 /* LaunchScreen.storyboard in Resources */,
 				6FB3E5271E44EDAC00DB7DF1 /* Localizable.strings in Resources */,
 				6F7200091E44DDB800F2E4B6 /* Assets.xcassets in Resources */,
+				6FB3E5511E490B7200DB7DF1 /* WorldViewCell.xib in Resources */,
+				6FB3E54B1E4901B700DB7DF1 /* response.txt in Resources */,
 				6F7200071E44DDB800F2E4B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,14 +342,26 @@
 			files = (
 				6FB3E5471E4785DA00DB7DF1 /* AppCoordinator.swift in Sources */,
 				6FB3E5411E450D3F00DB7DF1 /* Coordinator.swift in Sources */,
+				6FB3E5561E490C6B00DB7DF1 /* WorldsResponse.swift in Sources */,
+				6FB3E5601E49208C00DB7DF1 /* String+Extra.swift in Sources */,
+				6FB3E5581E490EAA00DB7DF1 /* Dictionary+Values.swift in Sources */,
 				6FB3E5261E44EB1100DB7DF1 /* LoginData.swift in Sources */,
 				6FB3E5451E4784E600DB7DF1 /* LoginDataProvider.swift in Sources */,
 				6FB3E5361E44FDB700DB7DF1 /* UIResponder+FirstResponder.swift in Sources */,
 				6FB3E53F1E450BEE00DB7DF1 /* LoginCoordinator.swift in Sources */,
 				6FB3E5331E44FDAB00DB7DF1 /* NetworkingInterfaces.swift in Sources */,
+				6FB3E54D1E4906CC00DB7DF1 /* WorldsViewController.swift in Sources */,
 				6FB3E5211E44E0A900DB7DF1 /* LoginViewController.swift in Sources */,
+				6FB3E55C1E4918BD00DB7DF1 /* WorldsDatasource.swift in Sources */,
+				6FB3E5531E490B8300DB7DF1 /* WorldItem.swift in Sources */,
 				6FB3E5191E44DFEC00DB7DF1 /* AppDelegate.swift in Sources */,
+				6FB3E5621E49272400DB7DF1 /* WorldsDataProvider.swift in Sources */,
+				6FB3E5641E49310900DB7DF1 /* DataProviders.swift in Sources */,
+				6FB3E5501E490B7200DB7DF1 /* WorldViewCell.swift in Sources */,
 				6FB3E5431E47362200DB7DF1 /* UIViewController+Alerts.swift in Sources */,
+				6FB3E5661E49340100DB7DF1 /* Session.swift in Sources */,
+				6FB3E55A1E49162700DB7DF1 /* WorldsCoordinator.swift in Sources */,
+				6FB3E55E1E491BAE00DB7DF1 /* NSLocale+Extra.swift in Sources */,
 				6FB3E53C1E45008E00DB7DF1 /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
