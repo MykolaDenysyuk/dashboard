@@ -11,6 +11,7 @@ import UIKit
 protocol IWorldsViewControllerDelegate: class {
     func worldsDataProvider() -> DataProvider<IWorldsDatasource>
     func didSelect(aWorld:WorldItem, at index:IndexPath)
+    func didClickLogout()
 }
 
 class WorldsViewController: UIViewController {
@@ -43,6 +44,14 @@ class WorldsViewController: UIViewController {
         // removes empty separators
         tableView.tableFooterView = UIView()
         
+        let logoutButton = UIBarButtonItem(
+            title: "action.log_out".localized,
+            style: .done,
+            target: self,
+            action: #selector(logout))
+        logoutButton.tintColor = UIColor.red
+        navigationItem.rightBarButtonItem = logoutButton
+        
         let dataProvider = delegate.worldsDataProvider()
         showLoading()
         dataProvider.loadData { (success, datasource, error) in
@@ -62,6 +71,12 @@ class WorldsViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.hidesBackButton = true
+    }
+    
+    // MARK: Actions
+    
+    func logout() {
+        delegate.didClickLogout()
     }
 }
 

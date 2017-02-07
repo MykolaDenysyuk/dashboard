@@ -30,6 +30,12 @@ class AppCoordinator {
         rootWindow = UIWindow(frame: UIScreen.main.bounds)
         rootNavigationController = Coordinator.instantiateInitialController("root")
         rootWindow.rootViewController = rootNavigationController
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(doLogout),
+            name: .Logout,
+            object: nil)
     }
     
     // MARK: Actions
@@ -38,7 +44,12 @@ class AppCoordinator {
     func run() {
         rootWindow.makeKeyAndVisible()
         loginCoordinator.run()
-    }    
+    }
+    
+    @objc func doLogout() {
+        worldsCoordinator.reset()
+        rootNavigationController.popToRootViewController(animated: true)
+    }
 }
 
 
@@ -47,4 +58,8 @@ extension AppCoordinator: ILoginCoordinatorDelegate {
         session = Session(user: credentials)        
         worldsCoordinator.run()
     }
+}
+
+extension Notification.Name {
+    static let Logout = Notification.Name(rawValue: "LogoutNotification")
 }

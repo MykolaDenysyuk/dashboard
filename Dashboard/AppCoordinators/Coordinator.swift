@@ -18,6 +18,8 @@ protocol ICoordinator {
     init(_ rootController:UIViewController)
     /** call to show first controller of the flow for this coordinator */
     func run()
+    /** call to dismiss all view controllers and reset initial one */
+    func reset()
 }
 
 /** Base coordinator with initial controller of generic type */
@@ -46,6 +48,9 @@ class Coordinator<T:UIViewController>: ICoordinatorWithType {
         rootController.show(initialController, sender: self)
     }
     
+    func reset() {
+        initialController = instantiateInitialController()
+    }
     
     /** Helper method. By defualt loads controller from main storyboard by
         initialControllerIdentifier */

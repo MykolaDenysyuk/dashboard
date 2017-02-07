@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ILoginCoordinatorDelegate {
+protocol ILoginCoordinatorDelegate: class {
     func loginCompleted(credentials:LoginCredentials)
 }
 
@@ -16,7 +16,7 @@ class LoginCoordinator: Coordinator<LoginViewController> {
     
     // MARK: Vars
     
-    var delegate:ILoginCoordinatorDelegate!
+    weak var delegate:ILoginCoordinatorDelegate!
     
     // MARK: Actions
     

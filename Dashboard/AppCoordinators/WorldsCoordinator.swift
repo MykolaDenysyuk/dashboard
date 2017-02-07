@@ -9,10 +9,15 @@
 import UIKit
 
 class WorldsCoordinator: Coordinator<WorldsViewController> {
+    
+    // MARK: Vars
+    
     override var initialControllerIdentifier: String? {
         get {return super.initialControllerIdentifier ?? "worlds"}
         set {super.initialControllerIdentifier = newValue}
     }
+    
+    // MARK: Actions
     
     override func run() {
         initialController.delegate = self
@@ -28,5 +33,9 @@ extension WorldsCoordinator: IWorldsViewControllerDelegate {
     
     func didSelect(aWorld: WorldItem, at index: IndexPath) {
         // todo
+    }
+    
+    func didClickLogout() {
+        NotificationCenter.default.post(name: .Logout, object: nil)
     }
 }
