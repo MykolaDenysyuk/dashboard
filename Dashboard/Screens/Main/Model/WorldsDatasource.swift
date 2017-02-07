@@ -50,7 +50,8 @@ class WorldsDatasource: IWorldsDatasource {
             let flag = NSLocale.flag(countryCode: aWorld.countryCode)
             
             let viewModel = WorldViewModel(
-                name: aWorld.name, isOnline: aWorld.status.id == 3,
+                name: aWorld.name,
+                isOnline: aWorld.status.id == 3,
                 countryName: country,
                 countryEmoji: flag,
                 language: language)

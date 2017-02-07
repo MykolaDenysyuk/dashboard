@@ -63,7 +63,7 @@ class Coordinator<T:UIViewController>: ICoordinatorWithType {
             let storyboardID = initialControllerIdentifier
             else {error_impossibleCondition("initialControllerIdentifier is required")}
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard.currentMain
         if let controller = storyboard
             .instantiateViewController(
                 withIdentifier: storyboardID) as? T {
