@@ -11,19 +11,7 @@ import UIKit
 class WorldsDataProvider: DataProvider<IWorldsDatasource> {
 
     override func loadData(onComplete completionBlock: @escaping (Bool, IWorldsDatasource?, NSError?) -> ()) {
-        
-        if let path = Bundle.main.path(forResource: "response", ofType: "txt") {
-            let plistString = try! String(contentsOfFile: path, encoding: .utf8)
-            let plistData = plistString.data(using: .utf8)
-            
-            let plist = try! PropertyListSerialization.propertyList(from: plistData!, options: [], format: nil)
-            let response = WorldsResponse(plist)!
-            let datasource = WorldsDatasource(worlds: response.availableWorlds)
-            completionBlock(true, datasource, nil)
-        }
-        
-        return
-        /*
+
         let requestable = WorldsRequestableDataProvider()
         requestable.loadData { (success, response, error) in
             guard
@@ -41,7 +29,7 @@ class WorldsDataProvider: DataProvider<IWorldsDatasource> {
                     completionBlock(true, datasource, nil)
                 }
             }
-        }*/
+        }
     }
 }
 

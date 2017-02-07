@@ -38,8 +38,7 @@ class AppCoordinator {
     func run() {
         rootWindow.makeKeyAndVisible()
         loginCoordinator.run()
-    }
-    
+    }    
 }
 
 

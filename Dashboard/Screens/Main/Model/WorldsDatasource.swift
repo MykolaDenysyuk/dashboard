@@ -62,6 +62,6 @@ class WorldsDatasource: IWorldsDatasource {
     // MARK: Accessors
     
     func item(at:IndexPath) -> WorldItem {
-        fatalError()
+        return worlds[at.row]
     }
 }

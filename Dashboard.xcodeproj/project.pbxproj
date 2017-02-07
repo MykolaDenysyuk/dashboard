@@ -21,7 +21,6 @@
 		6FB3E5411E450D3F00DB7DF1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5401E450D3F00DB7DF1 /* Coordinator.swift */; };
 		6FB3E5431E47362200DB7DF1 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5421E47362200DB7DF1 /* UIViewController+Alerts.swift */; };
 		6FB3E5471E4785DA00DB7DF1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E5461E4785DA00DB7DF1 /* AppCoordinator.swift */; };
-		6FB3E54B1E4901B700DB7DF1 /* response.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E54A1E4901B700DB7DF1 /* response.txt */; };
 		6FB3E54D1E4906CC00DB7DF1 /* WorldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E54C1E4906CC00DB7DF1 /* WorldsViewController.swift */; };
 		6FB3E5501E490B7200DB7DF1 /* WorldViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3E54E1E490B7200DB7DF1 /* WorldViewCell.swift */; };
 		6FB3E5511E490B7200DB7DF1 /* WorldViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E54F1E490B7200DB7DF1 /* WorldViewCell.xib */; };
@@ -54,7 +53,6 @@
 		6FB3E5401E450D3F00DB7DF1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6FB3E5421E47362200DB7DF1 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		6FB3E5461E4785DA00DB7DF1 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		6FB3E54A1E4901B700DB7DF1 /* response.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = response.txt; sourceTree = "<group>"; };
 		6FB3E54C1E4906CC00DB7DF1 /* WorldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldsViewController.swift; sourceTree = "<group>"; };
 		6FB3E54E1E490B7200DB7DF1 /* WorldViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewCell.swift; sourceTree = "<group>"; };
 		6FB3E54F1E490B7200DB7DF1 /* WorldViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldViewCell.xib; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				6F7200051E44DDB800F2E4B6 /* Main.storyboard */,
 				6F72000A1E44DDB800F2E4B6 /* LaunchScreen.storyboard */,
 				6FB3E5291E44EDAC00DB7DF1 /* Localizable.strings */,
-				6FB3E54A1E4901B700DB7DF1 /* response.txt */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				6FB3E5271E44EDAC00DB7DF1 /* Localizable.strings in Resources */,
 				6F7200091E44DDB800F2E4B6 /* Assets.xcassets in Resources */,
 				6FB3E5511E490B7200DB7DF1 /* WorldViewCell.xib in Resources */,
-				6FB3E54B1E4901B700DB7DF1 /* response.txt in Resources */,
 				6F7200071E44DDB800F2E4B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

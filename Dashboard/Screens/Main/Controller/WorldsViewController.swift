@@ -40,6 +40,8 @@ class WorldsViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 60
+        // removes empty separators
+        tableView.tableFooterView = UIView()
         
         let dataProvider = delegate.worldsDataProvider()
         showLoading()
@@ -59,6 +61,7 @@ class WorldsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationItem.hidesBackButton = true
     }
 }
 

@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
         
         title = "login.title".localized
         
+        loginField.placeholder = "login.username".localized
+        passwordField.placeholder = "login.password".localized
+        loginButton.setTitle("login.action".localized, for: .normal)
+        
         automaticallyAdjustsScrollViewInsets = false
         
         _registerForKeyboardNotifications()

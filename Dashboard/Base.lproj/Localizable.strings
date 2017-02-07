@@ -7,12 +7,17 @@
 */
 
 // General
+
 "action.ok" = "OK";
+"action.log_out" = "Log Out";
 
 
 // Login
 
-"login.title" = "Log out";
+"login.title" = "Log In";
+"login.username" = "username";
+"login.password" = "password";
+"login.action" = "Log In";
 "login.alert" = "Username and password are required";
 
 
